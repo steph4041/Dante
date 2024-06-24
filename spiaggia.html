@@ -1,0 +1,108 @@
+<font size="7">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Dante</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <style>
+    h2 {
+      text-align: center;
+    }
+
+    body {
+      text-align: center;
+    }
+
+    a:link {
+      color: white;
+      background-color: transparent;
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: white;
+      background-color: transparent;
+      text-decoration: none;
+    }
+     a:hover {
+    color: lightgray;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  a:active {
+    color: lightcyan;
+    background-color: transparent;
+    text-decoration: underline;
+  </style>
+  <html>
+  Spiaggia <br>
+  <a href="./index.html">Torna indietro</a> <br>
+
+  <head>
+    <title>random words</title>
+    <style>
+      #output {
+
+        font-family: fantisy;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <h2>Premi genera e rispondi alla domanda</h2>
+
+    <div>
+      <button style="height:100px;width:200px">
+        <font size="7">Genera
+      </button>
+
+    </div>
+    <div>
+
+
+
+      <div id="output"></div>
+
+      <script>
+
+        var btn = document.querySelector("button");
+        var out = document.getElementById("output");
+
+
+        btn.addEventListener("click", getWord);
+
+        function getWord() {
+
+
+          var theWord = [
+            'Che differenza c e tra inferno e paradiso rispetto al purgatorio in termini di permanenza?',
+            'Si dice che il purgatorio sia un regno di passaggio; come fanno le anime ad ascendere al paradiso?',
+            'Cosa si trova alla base della montagna del purgatorio?',
+            'Quali anime si trovano nell Antipurgatorio?',
+            'Chi sono i negligenti?',
+            'In quante categorie si dividono per Dante i negligenti? Quali sono?',
+            'Chi arriva sulla spiaggia?',
+            'Chi accompagna le anime sbarcate?',
+            'Chi e il custode del purgatorio?',
+            'Su quale principio si basano le punizioni delle anime del purgatorio?',
+            'Quando Catone rimprovera le anime, quale sentimento prova Dante?',
+            'Attraverso quale azione le anime possono sperare di accorciare la loro permanenza in purgatorio?',
+
+
+
+          ];
+
+
+          var wordNum = Math.floor(Math.random() * theWord.length);
+
+
+          output.textContent = theWord[wordNum];
+        }
+      </script>
+  </body>
+
+  </html>

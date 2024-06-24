@@ -1,0 +1,108 @@
+<font size="7">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Dante</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <style>
+    h2 {
+      text-align: center;
+    }
+
+    body {
+      text-align: center;
+    }
+
+    a:link {
+      color: white;
+      background-color: transparent;
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: white;
+      background-color: transparent;
+      text-decoration: none;
+    }
+     a:hover {
+    color: lightgray;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  a:active {
+    color: lightcyan;
+    background-color: transparent;
+    text-decoration: underline;
+  </style>
+<html>
+  Secondo balzo / valletta <br>
+<a href="./index.html">Torna indietro</a> <br>
+
+<head>
+  <title>random words</title>
+  <style>
+    #output {
+
+      font-family: fantisy;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Premi genera e rispondi alla domanda</h2>
+  <div>
+    <button style="height:100px;width:200px">
+        <font size="7">Genera
+      </button>
+  </div>
+  <div>
+
+
+
+    <div id="output"></div>
+
+    <script>
+
+      var btn = document.querySelector("button");
+      var out = document.getElementById("output");
+
+
+      btn.addEventListener("click", getWord);
+
+      function getWord() {
+
+
+        var theWord = [
+          'Cosa fanno le anime nella valletta?',
+          'Quando arriva la sera, cosa recitano le anime?',
+          'Che stato d animo ha Dante nella valletta?',
+          'Come reagisce Dante alle preghiere alla sera?',
+          'Chi scende dall alto nella valletta?',
+          'Perche il serpente scappa subito?',
+          'Cosa rappresentano le tre stelle?',
+          'Da dove vengono gli angeli della valletta? Perche?',
+          'Guardando verso il cielo, cosa vede Dante?',
+          'Cosa chiede Dante a Visconti?',
+          'Si riesce a distinguere il volto degli angeli della valletta?',
+          'Chi riconosce Dante tra le anime della valletta?',
+          'Come reagisce Dante al pensiero dell arrivo del serpente?',
+          'Che tipo di anime troviamo nel secondo balzo?',
+          'Chi trovano nella valletta fiorita Dante e Virgilio?',
+          'Come sono gli angeli della valletta?',
+          'Cosa chiede Corrado Malaspina a Dante?',
+
+        ];
+
+
+        var wordNum = Math.floor(Math.random() * theWord.length);
+
+
+        output.textContent = theWord[wordNum];
+      }
+    </script>
+</body>
+
+</html>

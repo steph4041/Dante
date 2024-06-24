@@ -1,0 +1,104 @@
+<font size="7">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Dante</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <style>
+    h2 {
+      text-align: center;
+    }
+
+    body {
+      text-align: center;
+    }
+
+    a:link {
+      color: white;
+      background-color: transparent;
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: white;
+      background-color: transparent;
+      text-decoration: none;
+    }
+     a:hover {
+    color: lightgray;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  a:active {
+    color: lightcyan;
+    background-color: transparent;
+    text-decoration: underline;
+  </style>
+<html>
+   Piedi del monte <br>
+<a href="./index.html">Torna indietro</a> <br>
+
+<head>
+  <title>random words</title>
+  <style>
+    #output {
+
+      font-family: fantisy;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Premi genera e rispondi alla domanda</h2>
+
+  <div>
+    <button style="height:100px;width:200px">
+        <font size="7">Genera
+      </button>
+
+  </div>
+  <div>
+
+
+
+    <div id="output"></div>
+
+    <script>
+
+      var btn = document.querySelector("button");
+      var out = document.getElementById("output");
+
+
+      btn.addEventListener("click", getWord);
+
+      function getWord() {
+
+
+        var theWord = [
+          'Quali anime incontra Dante ai piedi del monte?',
+          'Quando le anime vedono l ombra di Dante, cosa fanno?',
+          'Dante sulla spiaggia aveva provato ad abbracciare un amico non riuscendoci perche egli e solo un anima. Che domanda si pone Dante sulle anime dopo questa esperienza?',
+          'Quale pena viene inflitta agli scomunicati?',
+          'Con quale anima in particolare si sofferma a parlare Dante?',
+          'Dante si chiede che senso hanno le pene inflitte alle anime se esse sono anime e non corpo. Cosa risponde Virgilio?',
+          'Come mai Dante si accorge solo adesso che e in purgatorio, che Virgilio non ha un ombra?',
+          'L atteggiamento di Dante rispetto a quando era all Inferno e diverso. Come appare ora?',
+          'Quando le anime incontrano Dante, le prime si fermano, quelle dietro fanno la stessa cosa pur non capendo. A cosa le paragona Dante?',
+          'Quali anime si trovano nell antipurgatorio?',
+          'Cosa chiede Manfredi a Dante? Perche?',
+          'Tra gli scomunicati troviamo Manfredi di Svevia, come viene descritto?',
+        ];
+
+
+        var wordNum = Math.floor(Math.random() * theWord.length);
+
+
+        output.textContent = theWord[wordNum];
+      }
+    </script>
+</body>
+
+</html>

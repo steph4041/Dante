@@ -1,0 +1,108 @@
+<font size="7">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Dante</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <style>
+    h2 {
+      text-align: center;
+    }
+
+    body {
+      text-align: center;
+    }
+
+    a:link {
+      color: white;
+      background-color: transparent;
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: white;
+      background-color: transparent;
+      text-decoration: none;
+    }
+     a:hover {
+    color: lightgray;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  a:active {
+    color: lightcyan;
+    background-color: transparent;
+    text-decoration: underline;
+  </style>
+<html>
+  Settima cornice / Arrivo in Paradiso <br> 
+<a href="./index.html">Torna indietro</a> <br>
+
+<head>
+  <title>random words</title>
+  <style>
+    #output {
+
+      font-family: fantisy;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Premi genera e rispondi alla domanda</h2>
+  <div>
+    <button style="height:100px;width:200px">
+        <font size="7">Genera
+      </button>
+  </div>
+  <div>
+
+
+
+    <div id="output"></div>
+
+    <script>
+
+      var btn = document.querySelector("button");
+      var out = document.getElementById("output");
+
+
+      btn.addEventListener("click", getWord);
+
+      function getWord() {
+
+
+        var theWord = [
+          'Cosa rappresentano le fiamme nella settima cornice?',
+          'Chi incontra Dante?',
+          'Come si sente Dante dinnanzi a Guido Guinizelli?',
+          'Dante in questo momento (paradiso), come chiama Virgilio?',
+          'Virgilio rimane con Dante?',
+          'Chi è Guido Guinizelli?',
+          'Cosa si trova alla fine del Purgatorio?',
+          'Che pena scontano i dannati nella settima cornice?',
+          'A cosa serve il fiume della dimenticanza?',
+          'Cosa e il Lete?',
+          'Chi e la persona sul carro trainato da un Grifone?',
+          'Beatrice indossa una veste rossa, un manto verde e un velo bianco. cosa simboleggiano?',
+          'Come si sente Dante alla vista di Beatrice?',
+          'Chi sono i peccatori della settima cornice?',
+          'Dante da cosa riconosce Beatrice?',
+          'Come si comportano i dannati nel vedere come Beatrice si comporta con Dante?',
+          'Come motiva Beatrice il viaggio di Dante?',
+          'Come si comporta beatrice con Dante?',
+        ];
+
+
+        var wordNum = Math.floor(Math.random() * theWord.length);
+
+
+        output.textContent = theWord[wordNum];
+      }
+    </script>
+</body>
+
+</html>

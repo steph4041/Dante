@@ -1,0 +1,100 @@
+<font size="7">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Dante</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <style>
+    h2 {
+      text-align: center;
+    }
+
+    body {
+      text-align: center;
+    }
+
+    a:link {
+      color: white;
+      background-color: transparent;
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: white;
+      background-color: transparent;
+      text-decoration: none;
+    }
+     a:hover {
+    color: lightgray;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  a:active {
+    color: lightcyan;
+    background-color: transparent;
+    text-decoration: underline;
+  </style>
+<html>
+  Sesta cornice <br> 
+<a href="./index.html">Torna indietro</a> <br>
+
+<head>
+  <title>random words</title>
+  <style>
+    #output {
+
+      font-family: fantisy;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Premi genera e rispondi alla domanda</h2>
+  <div>
+    <button style="height:100px;width:200px">
+        <font size="7">Genera
+      </button>
+  </div>
+  <div>
+
+
+
+    <div id="output"></div>
+
+    <script>
+
+      var btn = document.querySelector("button");
+      var out = document.getElementById("output");
+
+
+      btn.addEventListener("click", getWord);
+
+      function getWord() {
+
+
+        var theWord = [
+          'Che pena scontano nella sesta cornice?',
+          'Che peccato hanno commesso quelli che si trovano nella sesta cornice?',
+          'Quali peccatori troviamo nella sesta cornice',
+          'Da quale albero deriva quello presente nella sesta cornice',
+          'Se Forese si e pentito in punto di morte, allora perche non e nell antipurgatorio?',
+          'Chi incontra Dante?',
+          'Chi era Stazio?',
+          'Che albero troviamo nella sesta cornice?',
+          'Chi era Forese Donati?',
+          'Che emozione suscita in Dante l incontro con Forese?',
+        ];
+
+
+        var wordNum = Math.floor(Math.random() * theWord.length);
+
+
+        output.textContent = theWord[wordNum];
+      }
+    </script>
+</body>
+
+</html>
